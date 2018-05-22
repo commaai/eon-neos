@@ -6,10 +6,10 @@ if [ ! -f system.simg ]; then
 fi
 
 fastboot oem 4F500301
-fastboot flash LOGO logo.bin
 fastboot flash recovery recovery.img
 
 # from OTA
+fastboot flash LOGO files/logo.bin
 fastboot flash boot files/boot.img
 fastboot flash system system.simg
 
