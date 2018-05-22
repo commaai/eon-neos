@@ -1,0 +1,8 @@
+{
+  "ota_url": "https://github.com/commaai/eon-neos/raw/master/ota-signed-ff3316eac749095fa754ba0c2c8ada75ac80c8fc609863596ae97046cc792b84.zip",                                                                                                   
+  "ota_hash": "ff3316eac749095fa754ba0c2c8ada75ac80c8fc609863596ae97046cc792b84",
+  "recovery_url": "https://github.com/commaai/eon-neos/raw/master/recovery.img",
+  "recovery_len": 14046504,
+  "recovery_hash": "b7a6a8d24ffd999f28c7e6a51ef50a5fb7c62b8f91d9b293f6dcf86f23d9ccd0"
+}
+

@@ -1,5 +1,7 @@
 #!/bin/bash
-unzip ota-signed-latest.zip
+if [ ! -d files ]; then
+  unzip ota-signed-latest.zip
+fi
 
 fastboot oem 4F500301
 fastboot flash LOGO logo.bin
