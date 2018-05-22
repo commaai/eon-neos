@@ -14,7 +14,7 @@ fastboot flash boot files/boot.img
 fastboot flash system system.simg
 
 # clear userdata
-#fastboot erase userdata
-#fastboot format cache
+fastboot erase userdata
+fastboot format cache
 fastboot reboot
 
