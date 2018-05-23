@@ -13,7 +13,7 @@ Manual Update / Restore
 
 Requirements: unzip, img2simg, fastboot
 
-Hold power and volume to enter fastboot mode. Then run:
+Clone this repo. Hold power and volume to enter fastboot mode on your EON. Then run:
 
 ```
 ./flash.sh
