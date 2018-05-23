@@ -6,7 +6,7 @@ This is the operating system for your [EON Dashcam Development Kit](https://shop
 Automatic Update
 ------
 
-When the time comes, you won't have to do anything, and this should just automatically update your EON.
+When the time comes, you won't have to do anything, and this should just automatically update your EON. This is the recommended option for most people.
 
 Manual Update / Restore
 ------
@@ -19,5 +19,5 @@ Hold power and volume to enter fastboot mode. Then run:
 ./flash.sh
 ```
 
-NOTE: This will wipe your EON
+<b>NOTE: This will wipe your EON</b>
 
