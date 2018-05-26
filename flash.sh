@@ -5,7 +5,7 @@ if [ ! -f system.simg ]; then
   img2simg files/system.img system.simg
 fi
 
-fastboot oem 4F500301
+fastboot oem 4F500301 || true
 fastboot flash recovery recovery.img
 
 # from OTA
