@@ -2,3 +2,6 @@
 files
 META-INF
 system.simg
+ota-signed-*
+recovery*
+
