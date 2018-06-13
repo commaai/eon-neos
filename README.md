@@ -16,6 +16,7 @@ Requirements: unzip, img2simg, fastboot
 Clone this repo. Hold power and volume to enter fastboot mode on your EON. Then run:
 
 ```
+./download.py
 ./flash.sh
 ```
 
