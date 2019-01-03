@@ -1,9 +1,7 @@
 NEOS
 ======
 
-This is the operating system for your [EON Dashcam Development Kit](https://shop.comma.ai/products/eon-dashcam-devkit)
-
-If you have an [EON Gold Dashcam DevKit](https://comma.ai/shop/products/eon-gold-dashcam-devkit) your operating system can be found [here](https://github.com/commaai/eon-neos-leeco).
+This is the operating system for your [EON Dashcam Development Kit](https://shop.comma.ai/products/eon-dashcam-devkit).
 
 It's open source, you can find the repo needed to build NEOS [here](https://github.com/commaai/eon-neos-builder)
 
