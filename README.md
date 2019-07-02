@@ -13,7 +13,7 @@ When the time comes, you won't have to do anything, and this should just automat
 Manual Update / Restore
 ------
 
-Requirements: unzip, img2simg, fastboot
+Requirements: unzip, simg2img, fastboot
 
 Clone this repo. Hold power and volume to enter fastboot mode on your EON. Then run:
 
