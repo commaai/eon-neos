@@ -37,7 +37,8 @@ Restoring on OS X
 
 Restoring on Linux
 ------
-
+Submit a PR with instructions.
 
 Restoring on Windows
 ------
+Submit a PR with instructions.
