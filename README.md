@@ -3,8 +3,6 @@ NEOS
 
 This is the operating system for your [EON Dashcam Development Kit](https://shop.comma.ai/products/eon-dashcam-devkit).
 
-It's open source, you can find the repo needed to build NEOS [here](https://github.com/commaai/eon-neos-builder)
-
 Automatic Update
 ------
 
