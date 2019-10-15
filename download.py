@@ -26,12 +26,7 @@ def download(url, fhash, finalname):
   print("hash check pass")
   os.system("rm -f %s; ln -s %s %s" % (finalname, fn, finalname))
 
-if len(sys.argv) > 1 and sys.argv[1] == "--staging":
-  print("using staging")
-  up = json.load(open("update.staging.json"))
-else:
-  up = json.load(open("update.json"))
-
+up = json.load(open("update.json"))
 download(up['recovery_url'], up['recovery_hash'], "recovery.img")
 download(up['ota_url'], up['ota_hash'], "ota-signed-latest.zip")
 
