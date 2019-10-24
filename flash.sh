@@ -5,15 +5,15 @@ if [ ! -f system.simg ] || [ ota-signed-latest.zip -nt system.simg ]; then
   img2simg files/system.img system.simg
 fi
 
-fastboot oem 4F500301 || true
-fastboot flash recovery recovery.img
+sudo fastboot oem 4F500301 || true
+sudo fastboot flash recovery recovery.img
 
 # from OTA
 [ -f files/logo.bin ] && fastboot flash LOGO files/logo.bin
-fastboot flash boot files/boot.img
-fastboot flash system system.simg
+sudo fastboot flash boot files/boot.img
+sudo fastboot flash system system.simg
 
 # clear userdata
-fastboot erase userdata
-fastboot format cache
-fastboot reboot
+sudo fastboot erase userdata
+sudo fastboot format cache
+sudo fastboot reboot
