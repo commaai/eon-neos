@@ -39,4 +39,16 @@ Submit a PR with instructions.
 
 Restoring on Windows
 ------
-Submit a PR with instructions.
+These instructions do not require Android Studio nor img2simg to flash NEOS.
+1. Install Minimal ADB and Fastboot Tool from either [here](https://androidmtk.com/download-minimal-adb-and-fastboot-tool) or [here](https://forum.xda-developers.com/showthread.php?t=2317790).
+2. Boot your phone into the bootloader by holding volume down as well as the power button when you start the phone.
+2. From [update.json](update.json), download the two files in `ota_url` and `recovery_url`, then unzip the `ota_url` archive.
+3. Run:
+   1. `fastboot flash recovery C:/path/to/recovery....img`
+   2. `fastboot flash boot C:/path/to/boot....img`
+   3. `fastboot flash system C:/path/to/system....img`
+   4. `fastboot erase userdata`
+   5. `fastboot format cache`
+   6. `fastboot reboot`
+   
+You will get a message saying you have an invalid header magic when you try to flash the system partition. This is okay, it should still split and flash the system image successfully.
