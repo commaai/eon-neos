@@ -51,4 +51,4 @@ These instructions do not require Android Studio nor img2simg to flash NEOS.
    5. `fastboot format cache`
    6. `fastboot reboot`
    
-You will get a message saying you have an invalid header magic when you try to flash the system partition. This is okay, it should still split and flash the system image successfully.
+You will get a message saying `Invalid sparse file format at header magic` when you try to flash the system partition. This is okay, it should still split and flash the system image successfully.
