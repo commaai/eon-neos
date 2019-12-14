@@ -3,6 +3,7 @@ import sys
 import os
 import json
 import hashlib
+import argparse
 
 def sha256_checksum(filename, block_size=65536):
   sha256 = hashlib.sha256()
@@ -26,7 +27,19 @@ def download(url, fhash, finalname):
   print("hash check pass")
   os.system("rm -f %s; ln -s %s %s" % (finalname, fn, finalname))
 
-up = json.load(open("update.json"))
-download(up['recovery_url'], up['recovery_hash'], "recovery.img")
-download(up['ota_url'], up['ota_hash'], "ota-signed-latest.zip")
 
+
+if __name__ == "__main__":
+  parser = argparse.ArgumentParser(description='Download NEOS')
+  parser.add_argument('--devel', action='store_true',
+                      help='Download NEOS version used in devel branch')
+
+  args = parser.parse_args()
+  if args.devel:
+    fn = "update_devel.json"
+  else:
+    fn = "update.json"
+
+  up = json.load(open(fn))
+  download(up['recovery_url'], up['recovery_hash'], "recovery.img")
+  download(up['ota_url'], up['ota_hash'], "ota-signed-latest.zip")
