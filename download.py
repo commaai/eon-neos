@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-import sys
 import os
 import json
 import hashlib
 import argparse
+
 
 def sha256_checksum(filename, block_size=65536):
   sha256 = hashlib.sha256()
@@ -11,6 +11,7 @@ def sha256_checksum(filename, block_size=65536):
     for block in iter(lambda: f.read(block_size), b''):
       sha256.update(block)
   return sha256.hexdigest()
+
 
 def download(url, fhash, finalname):
   try:
@@ -26,7 +27,6 @@ def download(url, fhash, finalname):
   assert sha256_checksum(fn).lower() == fhash.lower()
   print("hash check pass")
   os.system("rm -f %s; ln -s %s %s" % (finalname, fn, finalname))
-
 
 
 if __name__ == "__main__":

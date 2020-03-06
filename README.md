@@ -38,4 +38,8 @@ Submit a PR with instructions.
 
 Restoring on Windows
 ------
-Submit a PR with instructions.
+1. Download and extract this repository (https://github.com/commaai/eon-neos/archive/master.zip)
+2. Download & Intall Python 3 (https://www.python.org/ftp/python/3.8.2/python-3.8.2.exe)
+3. Run download.py to download NEOS and flashing tools
+4. Put eon or comma 2 in fastboot mode while holding power and volume down and plugging it into your computer
+5. Run flash.ps1 (right click, run with powershell)
