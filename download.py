@@ -1,10 +1,16 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import os
 import sys
 import json
 import hashlib
 import argparse
-import urllib.request
+
+try:
+  # Python 3
+  from urllib.request import urlretrieve
+except ImportError:
+  # Python 2
+  from urllib import urlretrieve
 
 
 def download_progress(count, blockSize, totalSize):
@@ -31,7 +37,7 @@ def download(url, fhash, finalname):
 
   print("downloading %s with hash %s" % (url, fhash))
   fn = url.split("/")[-1]
-  urllib.request.urlretrieve(url, fn, download_progress)
+  urlretrieve(url, fn, download_progress)
   assert sha256_checksum(fn).lower() == fhash.lower()
 
   print("hash check pass")
