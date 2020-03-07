@@ -1,8 +1,16 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import os
+import sys
 import json
 import hashlib
 import argparse
+import urllib.request
+
+
+def download_progress(count, blockSize, totalSize):
+    if count % 1000 == 0:
+      sys.stdout.write('.')
+      sys.stdout.flush()
 
 
 def sha256_checksum(filename, block_size=65536):
@@ -22,9 +30,10 @@ def download(url, fhash, finalname):
     pass
 
   print("downloading %s with hash %s" % (url, fhash))
-  os.system("curl -O %s" % url)
   fn = url.split("/")[-1]
+  urllib.request.urlretrieve(url, fn, download_progress)
   assert sha256_checksum(fn).lower() == fhash.lower()
+
   print("hash check pass")
   os.system("rm -f %s; ln -s %s %s" % (finalname, fn, finalname))
 
