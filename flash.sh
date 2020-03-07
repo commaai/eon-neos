@@ -8,7 +8,7 @@ if [ ! -f $FASTBOOT ]; then
     rm -rf platform-tools
     rm -f platform-tools-latest-$PLATFORM.zip
 
-    wget https://dl.google.com/android/repository/platform-tools-latest-$PLATFORM.zip
+    curl -L https://dl.google.com/android/repository/platform-tools-latest-$PLATFORM.zip --output platform-tools-latest-$PLATFORM.zip
     unzip platform-tools-latest-$PLATFORM.zip
 
     rm -f platform-tools-latest-$PLATFORM.zip

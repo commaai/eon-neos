@@ -41,7 +41,7 @@ def download(url, fhash, finalname):
   assert sha256_checksum(fn).lower() == fhash.lower()
 
   print("hash check pass")
-  os.system("rm -f %s; ln -s %s %s" % (finalname, fn, finalname))
+  os.rename(fn, finalname)
 
 
 if __name__ == "__main__":
