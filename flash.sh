@@ -16,6 +16,7 @@ fi
 
 if [ ota-signed-latest.zip -nt files/system.img ]; then
   unzip -o ota-signed-latest.zip
+  touch files/system.img
 fi
 
 sudo $FASTBOOT oem 4F500301 || true
