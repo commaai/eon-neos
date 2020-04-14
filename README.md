@@ -13,7 +13,8 @@ Manual Update / Restore
 
 <b>NOTE: This will wipe your EON</b>
 
-Before continuing, please ensure the device is plugged into your computer. The restore & update takes place over USB and not over SSH.
+Prior to the restore, plug in your EON into your computer via USB. In the event the device turns on automatically, turn off the EON by holding the power button and selecting `Power off`. This update & restore takes place via USB and not via SSH connection.
+
 
 Restoring on Linux/OS X
 ------
@@ -21,7 +22,7 @@ Restoring on Linux/OS X
 1. Open a terminal
 2. Clone this repo `git clone https://github.com/commaai/eon-neos.git`, then cd into the cloned repo `cd eon-neos`
 3. Run `./download.py`
-4. Put your Eon into fastboot mode by turning off your Eon, then holding volume down + power (comma two, eon gold), or volume up + power (eon).
+4. Put your Eon into fastboot mode by turning off your Eon, then holding volume down + power (comma two, eon gold), or volume up + power (eon). 
 5. Run `./flash.sh` DO NOT DISCONNECT THE DEVICE!
 
 Restoring on Windows
