@@ -13,6 +13,8 @@ Manual Update / Restore
 
 <b>NOTE: This will wipe your EON</b>
 
+Before continuing, please ensure the device is plugged into your computer. The restore & update takes place over USB and not over SSH.
+
 Restoring on Linux/OS X
 ------
 
