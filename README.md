@@ -12,6 +12,7 @@ Manual Update / Restore
 ------
 
 <b>NOTE: This will wipe your EON</b>
+It is recommended to downgrade to Android 8 before installing neos for the first time.
 
 Restoring on Linux/OS X
 ------
