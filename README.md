@@ -16,16 +16,18 @@ Manual Update / Restore
 Restoring on Linux/OS X
 ------
 
-1. Open a terminal
-2. Clone this repo `git clone https://github.com/commaai/eon-neos.git`, then cd into the cloned repo `cd eon-neos`
-3. Run `./download.py`
-4. Put your Eon into fastboot mode by turning off your Eon, then holding volume down + power (comma two, eon gold), or volume up + power (eon).
-5. Run `./flash.sh` DO NOT DISCONNECT THE DEVICE!
+1. Connect your Comma Two/EON via a USB-C to USB-A cable into your computer (a.k.a host machine)
+2. Open a terminal
+3. Clone this repo `git clone https://github.com/commaai/eon-neos.git`, then cd into the cloned repo `cd eon-neos`
+4. Run `./download.py`
+5. Put your Eon into fastboot mode by turning off your Eon, then holding volume down + power (comma two, eon gold), or volume up + power (eon).
+6. Run `./flash.sh` DO NOT DISCONNECT THE DEVICE!
 
 Restoring on Windows
 ------
-1. Download and extract this repository (https://github.com/commaai/eon-neos/archive/master.zip)
-2. Download & Intall Python 3 (https://www.python.org/ftp/python/3.8.2/python-3.8.2.exe)
-3. Run download.py to download NEOS and flashing tools
-4. Put your Eon into fastboot mode by turning off your Eon, then holding volume down + power (comma two, eon gold), or volume up + power (eon).
-5. Run flash.ps1 (right click, run with powershell). DO NOT DISCONNECT THE DEVICE!
+1. Connect your Comma Two/EON via a USB-C to USB-A cable into your computer (a.k.a host machine)
+2. Download and extract this repository (https://github.com/commaai/eon-neos/archive/master.zip)
+3. Download & Intall Python 3 (https://www.python.org/ftp/python/3.8.2/python-3.8.2.exe)
+4. Run download.py to download NEOS and flashing tools
+5. Put your Eon into fastboot mode by turning off your Eon, then holding volume down + power (comma two, eon gold), or volume up + power (eon).
+6. Run flash.ps1 (right click, run with powershell). DO NOT DISCONNECT THE DEVICE!
