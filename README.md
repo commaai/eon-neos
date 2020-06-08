@@ -16,7 +16,7 @@ Manual Update / Restore
 Restoring on Linux/OS X
 ------
 
-1. Connect your Comma Two/EON via a USB-C to USB-A cable into your computer (a.k.a host machine)
+1. Connect your Comma Two (via a USB-C to USB-A cable) or Comma EON (via a USB-mini-B to USB-A) into your computer (a.k.a host machine)
 2. Open a terminal
 3. Clone this repo `git clone https://github.com/commaai/eon-neos.git`, then cd into the cloned repo `cd eon-neos`
 4. Run `./download.py`
@@ -25,7 +25,7 @@ Restoring on Linux/OS X
 
 Restoring on Windows
 ------
-1. Connect your Comma Two/EON via a USB-C to USB-A cable into your computer (a.k.a host machine)
+1. Connect your Comma Two (via a USB-C to USB-A cable) or Comma EON (via a USB-mini-B to USB-A) into your computer (a.k.a host machine)
 2. Download and extract this repository (https://github.com/commaai/eon-neos/archive/master.zip)
 3. Download & Intall Python 3 (https://www.python.org/ftp/python/3.8.2/python-3.8.2.exe)
 4. Run download.py to download NEOS and flashing tools
