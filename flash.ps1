@@ -1,20 +1,20 @@
 
 $fastboot = "platform-tools/fastboot.exe"
-if (Test-Path -path $fastboot) { 
+if (Test-Path -path $fastboot) {
     Write-Host 'Platform tools found';
 } else {
     Write-Host 'Downloading platform tools';
 
     $client = new-object System.Net.WebClient
-    $client.DownloadFile("https://dl.google.com/android/repository/platform-tools-latest-windows.zip", "platform-tools-latest-windows.zip")
+    $client.DownloadFile("https://dl.google.com/android/repository/platform-tools_r28.0.2-windows.zip", "platform-tools.zip")
 
     Write-Host 'Extracting platform tools';
-    Expand-Archive -Path "platform-tools-latest-windows.zip" -DestinationPath "." -Force
+    Expand-Archive -Path "platform-tools.zip" -DestinationPath "." -Force
 
-    Remove-Item "platform-tools-latest-windows.zip"
+    Remove-Item "platform-tools.zip"
 }
 
-if (Test-Path -path "files/system.img") { 
+if (Test-Path -path "files/system.img") {
     $zip_file = Get-Item "ota-signed-latest.zip"
     $system_img = Get-Item "files/system.img"
 

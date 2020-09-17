@@ -2,16 +2,16 @@
 
 FASTBOOT=platform-tools/fastboot
 
+VERSION="r28.0.2"
 PLATFORM="$(uname -s | tr '[:upper:]' '[:lower:]')"
 
 if [ ! -f $FASTBOOT ]; then
     rm -rf platform-tools
     rm -f platform-tools-latest-$PLATFORM.zip
 
-    curl -L https://dl.google.com/android/repository/platform-tools-latest-$PLATFORM.zip --output platform-tools-latest-$PLATFORM.zip
-    unzip platform-tools-latest-$PLATFORM.zip
-
-    rm -f platform-tools-latest-$PLATFORM.zip
+    curl -L https://dl.google.com/android/repository/platform-tools_$VERSION-$PLATFORM.zip --output platform-tools.zip
+    unzip platform-tools.zip
+    rm -f platform-tools.zip
 fi
 
 if [ ota-signed-latest.zip -nt files/system.img ]; then
