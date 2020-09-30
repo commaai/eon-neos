@@ -1,7 +1,7 @@
 NEOS
 ======
 
-This is the operating system for your [comma two](https://comma.ai/shop/products/comma-two-devkit) and [EON Dashcam Development Kit](https://shop.comma.ai/products/eon-dashcam-devkit).
+This is the operating system for your [comma two](https://comma.ai/shop/products/comma-two-devkit) and [EON Dashcam Development Kit](https://comma.ai/shop/products/eon-gold-dashcam-devkit).
 
 Automatic Update
 ------
