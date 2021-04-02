@@ -6,7 +6,7 @@ NEOS is the operating system for your [comma two](https://comma.ai/shop/products
 Updates
 ------
 
-When openpilot requires a NEOS update, you won't have to do anything. NEOS update download in the background auotmatically, just like normal openpilot updates. This repo is for restoring or recovering your device.
+When openpilot requires a NEOS update, you won't have to do anything. NEOS updates download in the background auotmatically, just like normal openpilot updates. This repo is for restoring or recovering your device.
 
 Restoring on macOS & Linux
 ------
