@@ -30,7 +30,7 @@ if (Test-Path -path "files/system.img") {
 
 
 Invoke-Expression "$($fastboot) flash recovery recovery.img"
-Invoke-Expression "$($fastboot) flash boot files/boot.img"
+Invoke-Expression "$($fastboot) flash:raw boot files/boot.img"
 Invoke-Expression "$($fastboot) flash system files/system.img"
 
 Invoke-Expression "$($fastboot) erase userdata"
