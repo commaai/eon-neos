@@ -24,7 +24,7 @@ sudo $FASTBOOT flash recovery recovery.img
 
 # from OTA
 [ -f files/logo.bin ] && $FASTBOOT flash LOGO files/logo.bin
-sudo $FASTBOOT flash boot files/boot.img
+sudo $FASTBOOT flash:raw boot files/boot.img
 sudo $FASTBOOT flash system files/system.img
 
 # clear userdata
