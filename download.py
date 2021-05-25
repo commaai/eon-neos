@@ -46,12 +46,12 @@ def download(url, fhash, finalname):
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description='Download NEOS')
-  parser.add_argument('--devel', action='store_true',
-                      help='Download NEOS version used in devel branch')
+  parser.add_argument('--master', action='store_true',
+                      help='Download NEOS version used on the master branch')
 
   args = parser.parse_args()
-  if args.devel:
-    fn = "update_devel.json"
+  if args.master:
+    fn = "update_master.json"
   else:
     fn = "update.json"
 
