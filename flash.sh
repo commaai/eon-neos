@@ -19,6 +19,8 @@ if [ ota-signed-latest.zip -nt files/system.img ]; then
   touch files/system.img
 fi
 
+echo "Please enter your computer password when prompted"
+
 sudo $FASTBOOT oem 4F500301 || true
 sudo $FASTBOOT flash recovery recovery.img
 
