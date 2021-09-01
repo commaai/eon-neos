@@ -6,17 +6,12 @@ VERSION="r28.0.2"
 PLATFORM="$(uname -s | tr '[:upper:]' '[:lower:]')"
 
 if [ ! -f $FASTBOOT ]; then
-    rm -rf platform-tools
-    rm -f platform-tools-latest-$PLATFORM.zip
+  rm -rf platform-tools
+  rm -f platform-tools-latest-$PLATFORM.zip
 
-    curl -L https://dl.google.com/android/repository/platform-tools_$VERSION-$PLATFORM.zip --output platform-tools.zip
-    unzip platform-tools.zip
-    rm -f platform-tools.zip
-fi
-
-if [ ota-signed-latest.zip -nt files/system.img ]; then
-  unzip -o ota-signed-latest.zip
-  touch files/system.img
+  curl -L https://dl.google.com/android/repository/platform-tools_$VERSION-$PLATFORM.zip --output platform-tools.zip
+  unzip platform-tools.zip
+  rm -f platform-tools.zip
 fi
 
 echo "Please enter your computer password if prompted"

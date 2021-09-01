@@ -4,6 +4,7 @@ import sys
 import json
 import hashlib
 import argparse
+import zipfile
 
 try:
   # Python 3
@@ -28,12 +29,9 @@ def sha256_checksum(filename, block_size=65536):
 
 
 def download(url, fhash, finalname):
-  try:
-    assert sha256_checksum(finalname).lower() == fhash.lower()
+  if os.path.isfile(finalname) and sha256_checksum(finalname).lower() == fhash.lower():
     print("already downloaded %s" % url)
     return
-  except Exception:
-    pass
 
   print("downloading %s with hash %s" % (url, fhash))
   fn = url.split("/")[-1]
@@ -58,3 +56,6 @@ if __name__ == "__main__":
   up = json.load(open(fn))
   download(up['recovery_url'], up['recovery_hash'], "recovery.img")
   download(up['ota_url'], up['ota_hash'], "ota-signed-latest.zip")
+
+  with zipfile.ZipFile("ota-signed-latest.zip", 'r') as z:
+    z.extractall()
