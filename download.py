@@ -8,11 +8,13 @@ import zipfile
 
 try:
   # Python 3
-  from urllib.request import urlretrieve
+  from urllib.request import urlopen, urlretrieve
 except ImportError:
   # Python 2
-  from urllib import urlretrieve
+  from urllib import urlopen, urlretrieve
 
+MASTER_MANIFEST = "https://raw.githubusercontent.com/commaai/openpilot/master/installer/updater/update.json"
+RELEASE_MANIFEST = "https://raw.githubusercontent.com/commaai/openpilot/release2/installer/updater/update.json"
 
 def download_progress(count, blockSize, totalSize):
     if count % 1000 == 0:
@@ -48,12 +50,12 @@ if __name__ == "__main__":
                       help='Download NEOS version used on the master branch')
 
   args = parser.parse_args()
-  if args.master:
-    fn = "update_master.json"
-  else:
-    fn = "update.json"
 
-  up = json.load(open(fn))
+  manifest = MASTER_MANIFEST if args.master else RELEASE_MANIFEST
+
+  r = urlopen(manifest)
+
+  up = json.loads(r.read().decode())
   download(up['recovery_url'], up['recovery_hash'], "recovery.img")
   download(up['ota_url'], up['ota_hash'], "ota-signed-latest.zip")
 
