@@ -1,4 +1,0 @@
-logo.bin filter=lfs diff=lfs merge=lfs -text
-recovery*.img filter=lfs diff=lfs merge=lfs -text
-ota* filter=lfs diff=lfs merge=lfs -text
-*.tar.gz filter=lfs diff=lfs merge=lfs -text
