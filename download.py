@@ -14,7 +14,7 @@ except ImportError:
   from urllib import urlopen, urlretrieve
 
 MASTER_MANIFEST = "https://raw.githubusercontent.com/commaai/openpilot/master/selfdrive/hardware/eon/neos.json"
-RELEASE_MANIFEST = "https://raw.githubusercontent.com/commaai/openpilot/release2/installer/updater/update.json"
+RELEASE_MANIFEST = "https://raw.githubusercontent.com/commaai/openpilot/release2/selfdrive/hardware/eon/neos.json"
 
 def download_progress(count, blockSize, totalSize):
     if count % 1000 == 0:
