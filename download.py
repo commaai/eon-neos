@@ -13,7 +13,7 @@ except ImportError:
   # Python 2
   from urllib import urlopen, urlretrieve
 
-MASTER_MANIFEST = "https://raw.githubusercontent.com/commaai/openpilot/master/selfdrive/hardware/eon/neos.json"
+MASTER_MANIFEST = "https://raw.githubusercontent.com/commaai/openpilot/commatwo_master/selfdrive/hardware/eon/neos.json"
 RELEASE_MANIFEST = "https://raw.githubusercontent.com/commaai/openpilot/release2/selfdrive/hardware/eon/neos.json"
 
 def download_progress(count, blockSize, totalSize):
