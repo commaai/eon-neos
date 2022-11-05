@@ -18,6 +18,8 @@ Restoring on macOS & Linux
 5. Put your device into fastboot mode by turning off your device, then holding volume down + power.
 6. Run `./flash.sh` DO NOT DISCONNECT THE DEVICE!
 
+Note: If you've installed the latest Python (3.11 as of this update), be sure to run the included `Install Certificates.command included`, otherwise you may encounter `SSL: CERTIFICATE_VERIFY_FAILED` issues.
+
 Restoring on Windows
 ------
 1. Install the Google USB driver for ADB (Android Debug Bridge)... https://developer.android.com/studio/run/win-usb
